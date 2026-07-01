@@ -16,9 +16,9 @@ import io.cucumber.testng.CucumberOptions;
 				"pretty",
 				"html:target/cucumber-report.html"
 		},
- 
+		tags="@cart",
 		monochrome = true,
-		publish = true
+		publish = false
  
 		)
 public class TestRunner extends AbstractTestNGCucumberTests {
