@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
 				"pretty",
 				"html:target/cucumber-report.html"
 		},
-		tags="@cart or @product",
+		tags="@cart or @product or @login or @register",
 		monochrome = true,
 		publish = false
  
