@@ -11,7 +11,7 @@ Feature: Product Module
     Then User should navigate to All Products page
     When User clicks on first View Product
     Then Product details should be displayed
-
+    
   @SearchProduct
   Scenario: Search Product
 
