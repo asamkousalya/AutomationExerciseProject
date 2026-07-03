@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 				"pretty",
 				"html:target/cucumber-report.html"
 		},
-		
+		tags="@login",
 		monochrome = true,
 		publish = false
 		)
