@@ -7,7 +7,7 @@ When User opens automation exercise website
 Then Verify home page is visible
 When User clicks SignUp Login button
 Then Verify Login section visible
-When User enters email and password
+When User enters valid email and password
 And User clicks Login button
 Then Verify logged in username
 When User adds product to cart
