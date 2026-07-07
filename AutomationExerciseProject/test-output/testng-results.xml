@@ -1,58 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+=======
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-07-07T12:01:25 IST" name="Default suite" finished-at="2026-07-07T12:04:22 IST" duration-ms="176337">
+=======
+  <suite started-at="2026-07-07T10:40:54 IST" name="Default suite" finished-at="2026-07-07T10:42:18 IST" duration-ms="83581">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-07-07T12:01:25 IST" name="Default test" finished-at="2026-07-07T12:04:22 IST" duration-ms="176337">
+=======
+    <test started-at="2026-07-07T10:40:54 IST" name="Default test" finished-at="2026-07-07T10:42:18 IST" duration-ms="83581">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
       <class name="runners.TestRunner">
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-07T12:01:25 IST" name="setUpClass" finished-at="2026-07-07T12:01:29 IST" duration-ms="3699" status="PASS">
+=======
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:40:54 IST" name="setUpClass" finished-at="2026-07-07T10:40:56 IST" duration-ms="1204" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[org.testng.TestRunner@3b7b0b57]]>
+=======
+                <![CDATA[org.testng.TestRunner@3679d92e]]>
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-07T12:01:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T12:02:28 IST" duration-ms="58261" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:40:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:41:09 IST" duration-ms="13537" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Place Order - Login Before Checkout"]]>
+                <![CDATA["Verify user can filter products by brand"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Checkout"]]>
+                <![CDATA["Brand Filter"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:41:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:41:19 IST" duration-ms="10139" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can filter products by brand"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Brand Filter"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:41:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:41:29 IST" duration-ms="9773" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can filter products by brand"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Brand Filter"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:41:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:41:40 IST" duration-ms="10648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can filter products by brand"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Brand Filter"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:41:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:41:49 IST" duration-ms="9660" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can filter products by brand"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Brand Filter"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:41:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:41:58 IST" duration-ms="8910" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can filter products by brand"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Brand Filter"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:41:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:42:08 IST" duration-ms="9585" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can filter products by brand"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Brand Filter"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-07T12:02:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T12:03:21 IST" duration-ms="53188" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:42:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T10:42:18 IST" duration-ms="10009" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <params>
             <param index="0">
               <value>
-                <![CDATA["Place Order - Register Before Checkout"]]>
+                <![CDATA["Verify user can filter products by brand"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Checkout"]]>
+                <![CDATA["Brand Filter"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-07T12:03:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T12:04:20 IST" duration-ms="59472" status="PASS">
           <params>
             <param index="0">
@@ -70,6 +195,9 @@
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-07T12:04:20 IST" name="tearDownClass" finished-at="2026-07-07T12:04:22 IST" duration-ms="1517" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@63475ace]" started-at="2026-07-07T10:42:18 IST" name="tearDownClass" finished-at="2026-07-07T10:42:18 IST" duration-ms="23" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
