@@ -11,9 +11,7 @@ import utilities.BaseClass;
 public class RegisterSteps extends BaseClass {
 RegisterPage reg;
 
-@Given("User launches browser")
-public void browser() {
-}
+
 @When("User opens automation exercise website")
 public void open() {
 }

@@ -7,11 +7,7 @@
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
-<<<<<<< HEAD
-          <include name="runScenario" invocation-numbers="6"/>
-=======
-          <include name="runScenario" invocation-numbers="0"/>
->>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
+          <include name="runScenario" invocation-numbers="18 27"/>
         </methods>
       </class> <!-- runners.TestRunner -->
     </classes>

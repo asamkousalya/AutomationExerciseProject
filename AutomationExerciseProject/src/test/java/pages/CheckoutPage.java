@@ -67,11 +67,15 @@ public class CheckoutPage {
         js.executeScript("window.scrollBy(0,500)");
 
         WebElement addCart = wait.until(
-                ExpectedConditions.elementToBeClickable(By.cssSelector("a[data-product-id='1']")));
+                ExpectedConditions.elementToBeClickable(
+                        By.cssSelector("a[data-product-id='1']")));
 
         js.executeScript("arguments[0].click();", addCart);
 
-        wait.until(ExpectedConditions.elementToBeClickable(continueBtn)).click();
+        WebElement continueShopping = wait.until(
+                ExpectedConditions.visibilityOf(continueBtn));
+
+        js.executeScript("arguments[0].click();", continueShopping);
     }
 
     public void openCart() {

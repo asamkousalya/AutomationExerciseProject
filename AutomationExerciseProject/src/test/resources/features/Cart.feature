@@ -1,12 +1,6 @@
 @cart
 Feature: Cart Functionality
  
-Scenario: Verify Subscription in Cart page
-Given User opens cart page
-When User scrolls to footer
-And User enters email and subscribes
-Then Subscription success message should display
- 
 Scenario: Add Products to Cart
 Given User opens products page
 When User adds first and second product

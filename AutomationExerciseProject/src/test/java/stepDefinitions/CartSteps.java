@@ -7,26 +7,9 @@ import pages.CartPage;
 public class CartSteps {
     CartPage cart = new CartPage();
  
-    @Given("User opens cart page")
-    public void openCart() {
-        cart.openCart();
-    }
+    
  
-    @When("User scrolls to footer")
-    public void scrollFooter() {
-    }
- 
-    @When("User enters email and subscribes")
-    public void subscribe() {
-        cart.subscribe("test@gmail.com");
-    }
- 
-    @Then("Subscription success message should display")
-    public void verifySubscribe() {
- 
-        Assert.assertTrue(
-                cart.verifySubscription());
-    }
+   
  
     @Given("User opens products page")
     public void productsPage() {

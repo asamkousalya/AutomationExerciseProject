@@ -50,11 +50,8 @@ public class CartPage extends BaseClass {
     By remove =
             By.className("cart_quantity_delete");
  
-    By search =
-            By.name("search");
- 
-    By searchBtn =
-            By.id("submit_search");
+    By search = By.id("search_product");
+    By searchBtn = By.id("submit_search");
  
     public void openCart() {
     	 
@@ -102,7 +99,18 @@ public class CartPage extends BaseClass {
     }
  
     public void openProducts() {
-        driver.findElement(productsBtn).click();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        WebElement products = wait.until(
+                ExpectedConditions.elementToBeClickable(productsBtn));
+
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].click();", products);
+
+        wait.until(ExpectedConditions.urlContains("/products"));
+        System.out.println(driver.getCurrentUrl());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search_product")));
     }
  
     public void addProducts() {
@@ -179,18 +187,16 @@ public class CartPage extends BaseClass {
     }
  
     public void searchProduct(String product) {
-    	 
-    	WebDriverWait wait =
-    	new WebDriverWait(driver, Duration.ofSeconds(20));
-    	 
-    	wait.until(ExpectedConditions
-    	.visibilityOfElementLocated(By.name("search")));
-    	 
-    	driver.findElement(By.name("search"))
-    	.sendKeys(product);
-    	
-    	driver.findElement(By.id("submit_search"))
-    	.click();
-    	}
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        WebElement searchBox = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.id("search_product")));
+
+        searchBox.clear();
+        searchBox.sendKeys(product);
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("submit_search"))).click();
+    }
 }
  

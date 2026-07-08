@@ -32,7 +32,7 @@ public class ProductSteps extends BaseClass {
         product.clickFirstViewProduct();
     }
 
-    @Then("Product details should be displayed")
+    @Then("Product details should be displayed")    
     public void product_details_should_be_displayed() {
 
         Assert.assertTrue(product.isProductNameDisplayed());
@@ -46,9 +46,7 @@ public class ProductSteps extends BaseClass {
 
     @When("User searches for product {string}")
     public void user_searches_for_product(String productName) {
-
         product.searchProduct(productName);
-
     }
 
     @Then("Matching products should be displayed")
@@ -57,6 +55,26 @@ public class ProductSteps extends BaseClass {
         Assert.assertTrue(product.isSearchedProductsDisplayed());
         Assert.assertTrue(product.isSearchResultDisplayed());
 
+    }
+
+    @Then("Search box should be displayed")
+    public void search_box_should_be_displayed() {
+        Assert.assertTrue(product.isSearchBoxDisplayed());
+    }
+
+    @Then("Search button should be displayed")
+    public void search_button_should_be_displayed() {
+        Assert.assertTrue(product.isSearchButtonDisplayed());
+    }
+
+    @Then("First View Product button should be displayed")
+    public void first_view_product_button_should_be_displayed() {
+        Assert.assertTrue(product.isViewProductButtonDisplayed());
+    }
+
+    @Then("Product list should be displayed")
+    public void product_list_should_be_displayed() {
+        Assert.assertTrue(product.isProductListDisplayed());
     }
 
 }

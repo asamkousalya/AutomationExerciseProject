@@ -14,70 +14,60 @@ public class ProductPage extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    // Products Button
     @FindBy(xpath = "//a[@href='/products']")
     WebElement productsBtn;
 
-    // All Products Heading
     @FindBy(xpath = "//h2[text()='All Products']")
     WebElement allProductsHeading;
 
-    // First View Product Button
     @FindBy(xpath = "(//a[contains(text(),'View Product')])[1]")
     WebElement firstViewProduct;
 
-    // Product Name
     @FindBy(xpath = "//div[@class='product-information']/h2")
     WebElement productName;
 
-    // Category
     @FindBy(xpath = "//div[@class='product-information']/p[1]")
     WebElement category;
 
-    // Price
     @FindBy(xpath = "//div[@class='product-information']/span/span")
     WebElement price;
 
-    // Availability
     @FindBy(xpath = "//b[text()='Availability:']")
     WebElement availability;
 
-    // Condition
     @FindBy(xpath = "//b[text()='Condition:']")
     WebElement condition;
 
-    // Brand
     @FindBy(xpath = "//b[text()='Brand:']")
     WebElement brand;
 
-    // Search Box
     @FindBy(id = "search_product")
     WebElement searchBox;
 
-    // Search Button
     @FindBy(id = "submit_search")
     WebElement searchButton;
 
-    // Searched Products Heading
     @FindBy(xpath = "//h2[text()='Searched Products']")
     WebElement searchedProductsHeading;
 
-    // Product List
     @FindBy(xpath = "//div[@class='features_items']")
     WebElement searchedProducts;
 
-    // Methods
+    @FindBy(xpath = "//div[@class='features_items']")
+    WebElement productList;
 
     public void clickProducts() {
         productsBtn.click();
     }
 
     public boolean isAllProductsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(allProductsHeading));
         return allProductsHeading.isDisplayed();
     }
 
     public void clickFirstViewProduct() {
-    	wait.until(ExpectedConditions.visibilityOf(firstViewProduct));
+
+        wait.until(ExpectedConditions.visibilityOf(firstViewProduct));
 
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView({block:'center'});",
@@ -113,6 +103,7 @@ public class ProductPage extends BaseClass {
     }
 
     public void searchProduct(String product) {
+        searchBox.clear();
         searchBox.sendKeys(product);
         searchButton.click();
     }
@@ -124,4 +115,32 @@ public class ProductPage extends BaseClass {
     public boolean isSearchResultDisplayed() {
         return searchedProducts.isDisplayed();
     }
+
+    public boolean isSearchBoxDisplayed() {
+        return searchBox.isDisplayed();
+    }
+
+    public boolean isSearchButtonDisplayed() {
+        return searchButton.isDisplayed();
+    }
+
+    public boolean isViewProductButtonDisplayed() {
+        return firstViewProduct.isDisplayed();
+    }
+
+    public boolean isProductListDisplayed() {
+        return productList.isDisplayed();
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
