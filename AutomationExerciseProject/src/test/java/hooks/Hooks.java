@@ -50,11 +50,8 @@ public class Hooks extends BaseClass {
             test.pass("Scenario Passed");
 
         }
-
         tearDown();
-
     }
-
     @AfterAll
     public static void afterAll() {
 

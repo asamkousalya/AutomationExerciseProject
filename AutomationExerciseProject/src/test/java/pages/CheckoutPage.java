@@ -27,7 +27,7 @@ public class CheckoutPage {
     @FindBy(xpath = "//a[contains(text(),'Proceed To Checkout')]")
     WebElement checkout;
 
-    @FindBy(xpath = "//u[text()='Register / Login']")
+    @FindBy(xpath = "//a[contains(text(),'Signup / Login')]")
     WebElement registerLogin;
 
     @FindBy(name = "message")
@@ -87,7 +87,12 @@ public class CheckoutPage {
     }
 
     public void clickRegisterLogin() {
-        wait.until(ExpectedConditions.elementToBeClickable(registerLogin)).click();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        WebElement register = wait.until(
+                ExpectedConditions.elementToBeClickable(registerLogin));
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", register);
     }
 
     public boolean verifyAddress() {
