@@ -1,42 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="30" passed="28" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-07-08T16:07:16 IST" name="Default suite" finished-at="2026-07-08T16:22:50 IST" duration-ms="933953">
+=======
+  <suite started-at="2026-07-08T15:53:00 IST" name="Default suite" finished-at="2026-07-08T15:54:02 IST" duration-ms="61996">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-07-08T16:07:16 IST" name="Default test" finished-at="2026-07-08T16:22:50 IST" duration-ms="933953">
+=======
+    <test started-at="2026-07-08T15:53:00 IST" name="Default test" finished-at="2026-07-08T15:54:02 IST" duration-ms="61996">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
       <class name="runners.TestRunner">
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T16:07:16 IST" name="setUpClass" finished-at="2026-07-08T16:07:20 IST" duration-ms="3931" status="PASS">
+=======
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T15:53:00 IST" name="setUpClass" finished-at="2026-07-08T15:53:02 IST" duration-ms="1485" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[org.testng.TestRunner@7ca2319f]]>
+=======
+                <![CDATA[org.testng.TestRunner@353c6da1]]>
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T16:07:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T16:07:44 IST" duration-ms="24254" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T15:53:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T15:53:24 IST" duration-ms="22581" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user can filter products by brand"]]>
+                <![CDATA["Verify category filter"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Brand Filter"]]>
+                <![CDATA["Category Filter"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T16:07:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T16:08:06 IST" duration-ms="22032" status="FAIL">
           <params>
             <param index="0">
@@ -68,37 +89,45 @@ at ✽.Brand page should be displayed(file:///C:/Users/AS20696736/git/repository
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T16:08:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T16:08:24 IST" duration-ms="18260" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T15:53:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T15:53:43 IST" duration-ms="18606" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user can filter products by brand"]]>
+                <![CDATA["Verify category filter"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Brand Filter"]]>
+                <![CDATA["Category Filter"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T16:08:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T16:08:46 IST" duration-ms="21904" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T15:53:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T15:54:01 IST" duration-ms="18443" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user can filter products by brand"]]>
+                <![CDATA["Verify category filter"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Brand Filter"]]>
+                <![CDATA["Category Filter"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T16:08:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T16:09:01 IST" duration-ms="14943" status="PASS">
           <params>
             <param index="0">
@@ -561,6 +590,9 @@ at ✽.User enters payment details(file:///C:/Users/AS20696736/git/repository2/A
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T16:22:48 IST" name="tearDownClass" finished-at="2026-07-08T16:22:50 IST" duration-ms="1571" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@31edaa7d]" started-at="2026-07-08T15:54:01 IST" name="tearDownClass" finished-at="2026-07-08T15:54:02 IST" duration-ms="778" status="PASS">
+>>>>>>> branch 'master' of https://github.com/asamkousalya/AutomationExerciseProject.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
