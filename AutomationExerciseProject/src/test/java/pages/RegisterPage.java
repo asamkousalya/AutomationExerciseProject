@@ -1,21 +1,34 @@
 package pages;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.*;
+import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegisterPage {
 
     WebDriver driver;
+    WebDriverWait wait;
 
     public RegisterPage(WebDriver driver) {
 
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    @FindBy(xpath = "//a[text()=' Signup / Login']")
+    // Home Page
+
+    @FindBy(xpath = "//a[contains(text(),'Signup / Login')]")
     WebElement signup;
+
+    // Signup Page
 
     @FindBy(name = "name")
     WebElement name;
@@ -23,11 +36,19 @@ public class RegisterPage {
     @FindBy(xpath = "//input[@data-qa='signup-email']")
     WebElement email;
 
-    @FindBy(xpath = "//button[text()='Signup']")
-    WebElement signupBtn;
+    @FindBy(xpath = "//button[@data-qa='signup-button']")
+    WebElement signupButton;
+
+    @FindBy(xpath = "//p[text()='Email Address already exist!']")
+    WebElement emailExistsMsg;
+
+    // Account Information
 
     @FindBy(id = "id_gender1")
-    WebElement gender;
+    WebElement maleGender;
+
+    @FindBy(id = "id_gender2")
+    WebElement femaleGender;
 
     @FindBy(id = "password")
     WebElement password;
@@ -41,14 +62,22 @@ public class RegisterPage {
     @FindBy(id = "years")
     WebElement year;
 
+    // Address Information
+
     @FindBy(id = "first_name")
-    WebElement fname;
+    WebElement firstName;
 
     @FindBy(id = "last_name")
-    WebElement lname;
+    WebElement lastName;
+
+    @FindBy(id = "company")
+    WebElement company;
 
     @FindBy(id = "address1")
-    WebElement address;
+    WebElement address1;
+
+    @FindBy(id = "address2")
+    WebElement address2;
 
     @FindBy(id = "country")
     WebElement country;
@@ -63,67 +92,246 @@ public class RegisterPage {
     WebElement zipcode;
 
     @FindBy(id = "mobile_number")
-    WebElement mobile;
+    WebElement mobileNumber;
+
+    // Create Account
 
     @FindBy(xpath = "//button[text()='Create Account']")
-    WebElement create;
+    WebElement createAccountButton;
 
     @FindBy(xpath = "//b[text()='Account Created!']")
-    WebElement accountCreated;
+    WebElement accountCreatedMessage;
 
     @FindBy(xpath = "//a[@data-qa='continue-button']")
-    WebElement continueBtn;
+    WebElement continueButton;
+
+    // ================= Methods =================
 
     public void clickSignup() {
+
+        wait.until(ExpectedConditions.elementToBeClickable(signup));
         signup.click();
     }
 
-    public void enterSignup(String uname, String mail) {
-        name.sendKeys(uname);
-        email.sendKeys(mail);
+    public void enterSignup(String userName, String emailId) {
+
+        name.clear();
+        email.clear();
+
+        name.sendKeys(userName);
+        email.sendKeys(emailId);
     }
 
     public void clickSignupButton() {
-        signupBtn.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(signupButton));
+
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].click();", signupButton);
     }
 
-    public void accountDetails() {
-
-        gender.click();
-        password.sendKeys("Test@123");
-
-        new Select(day).selectByValue("1");
-        new Select(month).selectByValue("1");
-        new Select(year).selectByValue("2000");
-    }
-
-    public void addressDetails() {
-
-        fname.sendKeys("Kousalya");
-        lname.sendKeys("A");
-        address.sendKeys("Hyderabad");
-
-        new Select(country).selectByVisibleText("India");
-
-        state.sendKeys("Telangana");
-        city.sendKeys("Hyderabad");
-        zipcode.sendKeys("500001");
-        mobile.sendKeys("9876543210");
-    }
-
-    public void createAccount() throws InterruptedException {
+    public void accountDetails(String gender,
+                               String pwd,
+                               String d,
+                               String m,
+                               String y) {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", create);
-        Thread.sleep(1000);
-        js.executeScript("arguments[0].click();", create);
+
+        if (gender.equalsIgnoreCase("Male")) {
+
+            js.executeScript("arguments[0].click();", maleGender);
+
+        } else {
+
+            js.executeScript("arguments[0].click();", femaleGender);
+        }
+
+        password.sendKeys(pwd);
+
+        new Select(day).selectByValue(d);
+
+        // If feature file uses January, February...
+        new Select(month).selectByVisibleText(m);
+
+        // If feature file uses 1,2,3... replace above with:
+        // new Select(month).selectByValue(m);
+
+        new Select(year).selectByValue(y);
     }
 
-    public boolean created() {
-        return accountCreated.isDisplayed();
+    public void addressDetails(String fname,
+                               String lname,
+                               String addr,
+                               String countryValue,
+                               String stateValue,
+                               String cityValue,
+                               String zipValue,
+                               String mobileValue) {
+
+        firstName.sendKeys(fname);
+
+        lastName.sendKeys(lname);
+
+        company.sendKeys("Wipro");
+
+        address1.sendKeys(addr);
+
+        address2.sendKeys("Near Metro Station");
+
+        new Select(country).selectByVisibleText(countryValue);
+
+        state.sendKeys(stateValue);
+
+        city.sendKeys(cityValue);
+
+        zipcode.sendKeys(zipValue);
+
+        mobileNumber.sendKeys(mobileValue);
+    }
+
+    public void createAccount() {
+
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].scrollIntoView(true);",
+                        createAccountButton);
+
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].click();",
+                        createAccountButton);
+    }
+
+    public boolean verifyAccountCreated() {
+
+        return accountCreatedMessage.isDisplayed();
     }
 
     public void clickContinue() {
-        continueBtn.click();
+
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].click();",
+                        continueButton);
+    }
+    public void enterNameAndEmail() {
+
+        enterSignup(
+                "TestUser",
+                "test"+System.currentTimeMillis()+"@gmail.com");
+    }
+
+    public boolean verifyAccountInformationPage() {
+
+        return driver.getCurrentUrl().contains("signup");
+    }
+
+    public void enterAccountDetails() {
+
+        accountDetails(
+                "Male",
+                "Test@123",
+                "10",
+                "May",
+                "1998");
+    }
+
+    public void enterAddressDetails() {
+
+        addressDetails(
+                "Test",
+                "User",
+                "Hyderabad",
+                "India",
+                "Telangana",
+                "Hyderabad",
+                "500001",
+                "9876543212");
+    }
+
+    // Negative Scenarios
+
+    public void enterExistingUser() {
+
+        enterSignup(
+                "Existing User",
+                "vaibhavmakne0601@gmail.com");
+
+        clickSignupButton();
+    }
+
+    public boolean verifyEmailExists() {
+
+        return emailExistsMsg.isDisplayed();
+    }
+
+    public void enterInvalidEmail() {
+
+        enterSignup(
+                "Test User",
+                "abcgmail.com");
+
+        clickSignupButton();
+    }
+
+    public void enterEmptyName() {
+
+        name.clear();
+
+        email.clear();
+
+        email.sendKeys("test@gmail.com");
+
+        clickSignupButton();
+    }
+
+    public void enterEmptyEmail() {
+
+        name.clear();
+
+        email.clear();
+
+        name.sendKeys("Test User");
+
+        clickSignupButton();
+    }
+
+    public void enterEmptyNameAndEmail() {
+
+        name.clear();
+
+        email.clear();
+
+        clickSignupButton();
+    }
+
+    public void enterSpecialCharacterName() {
+
+        enterSignup(
+                "@@@Test###",
+                "test" + System.currentTimeMillis() + "@gmail.com");
+
+        clickSignupButton();
+    }
+
+    public void enterLongName() {
+
+        enterSignup(
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                "test" + System.currentTimeMillis() + "@gmail.com");
+
+        clickSignupButton();
+    }
+
+    public void enterNameWithSpaces() {
+
+        enterSignup(
+                "   Test User   ",
+                "test" + System.currentTimeMillis() + "@gmail.com");
+
+        clickSignupButton();
+    }
+
+    public boolean verifySignupPage() {
+
+        return driver.getCurrentUrl().contains("signup");
     }
 }

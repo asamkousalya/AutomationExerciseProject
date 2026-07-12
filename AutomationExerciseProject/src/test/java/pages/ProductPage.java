@@ -1,10 +1,13 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.BaseClass;
 
@@ -14,10 +17,10 @@ public class ProductPage extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[@href='/products']")
+    @FindBy(xpath = "//a[contains(text(),'Products')]")
     WebElement productsBtn;
 
-    @FindBy(xpath = "//h2[text()='All Products']")
+    @FindBy(xpath = "//h2[contains(text(),'All Products')]")
     WebElement allProductsHeading;
 
     @FindBy(xpath = "(//a[contains(text(),'View Product')])[1]")
@@ -61,7 +64,11 @@ public class ProductPage extends BaseClass {
     }
 
     public boolean isAllProductsDisplayed() {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
         wait.until(ExpectedConditions.visibilityOf(allProductsHeading));
+
         return allProductsHeading.isDisplayed();
     }
 

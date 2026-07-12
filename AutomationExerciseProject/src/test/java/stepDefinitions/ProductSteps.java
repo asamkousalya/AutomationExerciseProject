@@ -20,6 +20,7 @@ public class ProductSteps extends BaseClass {
     @When("User clicks on Products button")
     public void user_clicks_on_products_button() {
         product.clickProducts();
+        
     }
 
     @Then("User should navigate to All Products page")

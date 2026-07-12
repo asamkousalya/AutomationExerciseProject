@@ -8,14 +8,14 @@ import io.cucumber.testng.CucumberOptions;
 				"stepDefinitions",
 				"hooks"
 		},
-				plugin = {
+				plugin = { 
 					    "pretty",
 					    "html:target/cucumber-report.html",
 					    "json:target/cucumber.json",
 					    "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 					    "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 					},
-				tags="@category",
+				
 		
 		monochrome = true,
 		publish = false

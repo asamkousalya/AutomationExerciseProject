@@ -1,42 +1,34 @@
 @login
 Feature: Login User
 
-Scenario: Login with correct credentials
-Given User launches browser
-When User opens automation exercise website
-Then Verify home page is visible
-When User clicks SignUp Login button
-Then Verify Login section visible
-When User enters valid email and password
-And User clicks Login button
-Then Verify logged in username
+Scenario Outline: Verify Login
 
-Scenario: Login with invalid credentials
 Given User launches browser
 When User opens automation exercise website
 Then Verify home page is visible
 When User clicks SignUp Login button
 Then Verify Login section visible
-When User enters invalid email and password
+When User enters "<email>" and "<password>"
 And User clicks Login button
-Then Verify login error message
+Then Verify "<result>"
 
-Scenario: Verify login with invalid email format
-Given User launches browser
-When User opens automation exercise website
-Then Verify home page is visible
-When User clicks SignUp Login button
-Then Verify Login section visible
-When User enters invalid email format and password
-And User clicks Login button
-Then Verify email validation message
+Examples:
+| email                        | password    | result           |
+| vaibhavmakne0601@gmail.com   | Vaibhav@100 | success          |
+| wrong@gmail.com              | Wrong123    | error            |
+| wrongemail                   | Vaibhav@100 | emailValidation  |
+|                              | Vaibhav@100 | required         |
 
-Scenario: Verify login with empty fields
+
+Scenario: Verify Logout
+
 Given User launches browser
 When User opens automation exercise website
 Then Verify home page is visible
 When User clicks SignUp Login button
 Then Verify Login section visible
-When User leaves email and password empty
+When User enters "vaibhavmakne0601@gmail.com" and "Vaibhav@100"
 And User clicks Login button
-Then Verify required field validation
+Then Verify "success"
+When User clicks Logout button
+Then Verify Login page displayed

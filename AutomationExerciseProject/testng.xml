@@ -2,7 +2,7 @@
 <suite name="AutomationExerciseSuite">
     <test name="AutomationExerciseTests">
         <classes>
-            <class name="Tests.TestSetup"/>
+            <class name="runners.TestRunner"/>
         </classes>
     </test>
 </suite>
